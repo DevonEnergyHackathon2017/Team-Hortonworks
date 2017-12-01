@@ -1,0 +1,8 @@
+.idea/
+*.iml
+target/
+
+application.properties
+
+node_modules/
+

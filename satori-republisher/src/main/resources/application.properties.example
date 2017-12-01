@@ -1,0 +1,7 @@
+# Satori
+satori.endpoint=wss://open-data.api.satori.com
+satori.appkey=9825d693b2C42213C8E2005171C5eFXP
+satori.channel=transportation
+
+
+kafka.broker.address=hdp01.woolford.io:6667

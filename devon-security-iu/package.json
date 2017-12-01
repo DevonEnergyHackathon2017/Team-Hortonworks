@@ -1,0 +1,23 @@
+{
+  "name": "devon-security-iu",
+  "version": "1.0.0",
+  "description": "Devon security UI",
+  "author": "Alex Woolford <alex@woolford.io>",
+  "private": true,
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "windows": "cd ./src/ & lite-server",
+    "linux": "cd ./src/ ; lite-server"
+  },
+  "dependencies": {
+    "run": "^1.4.0"
+  },
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "lite-server": "^2.3.0",
+    "vue": "^2.5.8",
+    "vue-resource": "^0.9.3"
+  }
+}
