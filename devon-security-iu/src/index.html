@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/public/css/app.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+        integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+          integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+          crossorigin=""></script>
+</head>
+
+<body>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="container">
+    <a class="navbar-brand" href="/">Devon Energy - site security monitor</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+  <div id="interactive-map">
+    <button v-on:click="getCoords">refresh map</button>
+    <p>put interactive map here</p>
+
+  </div>
+
+</div>
+
+<div>
+  <div id="mapid"></div>
+</div>
+
+
+<!--<div class="container">-->
+
+  <!--<div id="ip-address-multi">-->
+
+    <!--<textarea id="ipAddressesString" v-model="ipAddressesString" placeholder="multiple IP addresses" rows="4"></textarea>-->
+    <!--<br>-->
+    <!--<button v-on:click="geoipMultiLookup">multi lookup</button>-->
+    <!--<br>-->
+    <!--<br>-->
+
+    <!--<table class="table table-striped">-->
+      <!--<tr>-->
+        <!--<th>ip</th>-->
+        <!--<th>city</th>-->
+        <!--<th>postal code</th>-->
+        <!--<th>subdivision</th>-->
+        <!--<th>country</th>-->
+        <!--<th>latitude</th>-->
+        <!--<th>longitude</th>-->
+        <!--<th>anon proxy</th>-->
+        <!--<th>legit proxy</th>-->
+        <!--<th>satellite provider</th>-->
+      <!--</tr>-->
+      <!--<tbody>-->
+      <!--<tr v-for="ipRecord in ipRecords">-->
+        <!--<td>{{ ipRecord.traits.ip_address }}</td>-->
+        <!--<td>{{ ipRecord.city.name }}</td>-->
+        <!--<td>{{ ipRecord.postal.code }}</td>-->
+        <!--<td>{{ ipRecord.subdivisions[0].iso_code }}</td>-->
+        <!--<td>{{ ipRecord.country.name }}</td>-->
+        <!--<td>{{ ipRecord.location.latitude.toFixed(3) }}</td>-->
+        <!--<td>{{ ipRecord.location.longitude.toFixed(3) }}</td>-->
+        <!--<td>{{ ipRecord.traits.is_anonymous_proxy }}</td>-->
+        <!--<td>{{ ipRecord.traits.is_legitimate_proxy }}</td>-->
+        <!--<td>{{ ipRecord.traits.is_satellite_provider }}</td>-->
+      <!--</tr>-->
+      <!--</tbody>-->
+    <!--</table>-->
+
+  <!--</div>-->
+
+<!--</div>-->
+
+
+<br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted" style="float:left;"></span>
+    <span class="text-muted" style="float:right;"></span>
+  </div>
+</footer>
+
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@2.2.5/dist/vue.js" type="text/javascript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="public/js/app.js" type="text/javascript"></script>
+
+
+</body>
+</html>
