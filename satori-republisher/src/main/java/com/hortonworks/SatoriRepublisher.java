@@ -15,6 +15,8 @@ import javax.annotation.PostConstruct;
 @Component
 public class SatoriRepublisher {
 
+    // We initially wanted a stream of vehicle movement data and so we used sample transportation data from Satori.
+
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Value("${satori.endpoint}")
@@ -29,7 +31,7 @@ public class SatoriRepublisher {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
-    @PostConstruct
+//    @PostConstruct
     private void satoriTransportationRepublisher(){
 
         final RtmClient client = new RtmClientBuilder(satoriEndpoint, satoriAppkey)
